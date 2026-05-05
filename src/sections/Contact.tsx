@@ -150,6 +150,7 @@ export function Contact({ inquiryEmail }: Props) {
               />
             </label>
 
+            <input type="hidden" name="_subject" value="Portfolio inquiry — Andrea Gonzahe" />
             <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
 
             <div className="flex flex-wrap items-center gap-4">
