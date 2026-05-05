@@ -9,17 +9,17 @@ export type GalleryItem = {
 const baseItems: GalleryItem[] = [
   {
     file: 'dsc-3115.jpg',
-    alt: 'Editorial portrait in warm studio light',
+    alt: 'LA model Lacy — editorial portrait in warm studio light',
     category: 'editorial',
   },
   {
     file: 'dsc-3351.jpg',
-    alt: 'Full-length fashion pose on seamless backdrop',
+    alt: 'Los Angeles model — full-length fashion pose on seamless backdrop',
     category: 'studio-fullbody',
   },
   {
     file: 'DSC_0208.JPG',
-    alt: 'Natural light portrait with soft expression',
+    alt: 'LA lifestyle model — natural light portrait with soft expression',
     category: 'natural-portrait',
   },
   {

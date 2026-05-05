@@ -33,7 +33,7 @@ export function Contact({ inquiryEmail }: Props) {
   return (
     <section
       id="contact"
-      className="scroll-mt-16 bg-canvas px-4 py-16 sm:px-6 md:scroll-mt-20 md:px-10 md:py-24"
+      className="scroll-mt-[max(5.5rem,calc(env(safe-area-inset-top)+4.25rem))] bg-canvas px-4 py-16 sm:scroll-mt-[max(4.5rem,calc(env(safe-area-inset-top)+3.25rem))] sm:px-6 md:px-10 md:py-24"
       aria-labelledby="contact-heading"
     >
       <div className="mx-auto max-w-5xl">
@@ -165,7 +165,7 @@ export function Contact({ inquiryEmail }: Props) {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-md shadow-accent/20 transition hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="inline-flex min-h-11 items-center justify-center rounded-full bg-accent px-8 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-md shadow-accent/20 transition hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent [-webkit-tap-highlight-color:transparent]"
               >
                 {state.submitting ? 'Sending…' : 'Send message'}
               </button>

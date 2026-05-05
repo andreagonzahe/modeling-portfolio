@@ -18,6 +18,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Anchor jumps clear the fixed header (taller when nav wraps on small phones) */
+    scroll-padding-top: max(5.5rem, calc(env(safe-area-inset-top) + 4.25rem));
+  }
+
+  @media (min-width: 640px) {
+    html {
+      scroll-padding-top: max(4.5rem, calc(env(safe-area-inset-top) + 3.25rem));
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -30,6 +38,7 @@
     @apply bg-canvas text-ink antialiased font-sans;
     margin: 0;
     min-height: 100svh;
+    overflow-x: hidden;
   }
 
   #root {
@@ -38,5 +47,32 @@
 
   ::selection {
     @apply bg-accent-soft text-ink;
+  }
+
+  /* Thin horizontal scrollbar for gallery strips */
+  .gallery-x-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--color-accent) 35%, transparent) transparent;
+  }
+
+  .gallery-x-scroll::-webkit-scrollbar {
+    height: 7px;
+  }
+
+  .gallery-x-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .gallery-x-scroll::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+    border-radius: 999px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-x-scroll {
+      scroll-behavior: auto;
+    }
   }
 }

@@ -6,7 +6,7 @@ export function Bio() {
   return (
     <section
       id="bio"
-      className="scroll-mt-16 border-y border-accent/12 bg-surface/80 px-4 py-16 sm:px-6 md:scroll-mt-20 md:px-10 md:py-20"
+      className="scroll-mt-[max(5.5rem,calc(env(safe-area-inset-top)+4.25rem))] border-y border-accent/12 bg-surface/80 px-4 py-16 sm:scroll-mt-[max(4.5rem,calc(env(safe-area-inset-top)+3.25rem))] sm:px-6 md:px-10 md:py-20"
       aria-labelledby="bio-heading"
     >
       <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-14">
@@ -27,9 +27,10 @@ export function Bio() {
           </h2>
           <p className="mt-6 text-base leading-relaxed text-ink-muted md:text-lg">
             Originally from Mexico, I moved to LA in 2017 and have been here since,
-            soaking up the light and creative scene. I love meeting new models and
-            photographers, and expressing myself through my body—whether that&apos;s
-            soft editorial or big movement.
+            soaking up the light and creative scene. I love collaborating with
+            photographers across editorial and lifestyle, intimate boudoir sets, and
+            fine art nude and figure work—always with clear communication and respect
+            for boundaries on set.
           </p>
         </motion.div>
 
@@ -43,7 +44,11 @@ export function Bio() {
           {[
             { label: 'Home base', value: 'Los Angeles' },
             { label: 'Since', value: '2017 in LA' },
-            { label: 'On set', value: 'Editorial · beauty · lifestyle' },
+            {
+              label: 'On set',
+              value:
+                'Editorial · beauty · lifestyle · boudoir · fine art nude · figure',
+            },
           ].map((row) => (
             <li
               key={row.label}

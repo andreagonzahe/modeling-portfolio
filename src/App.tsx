@@ -22,7 +22,7 @@ export default function App() {
         <Bio />
         <Contact inquiryEmail={INQUIRY_EMAIL} />
       </main>
-      <footer className="border-t border-accent/12 px-4 py-8 text-center text-xs text-ink-muted sm:px-6 md:px-10 md:text-sm">
+      <footer className="border-t border-accent/12 px-4 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] text-center text-xs text-ink-muted sm:px-6 md:px-10 md:text-sm">
         <p>
           © {new Date().getFullYear()} Lacy · Los Angeles ·{' '}
           <a
