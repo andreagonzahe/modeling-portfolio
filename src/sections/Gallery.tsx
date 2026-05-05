@@ -33,7 +33,7 @@ export function Gallery({ baseUrl }: Props) {
         </h2>
 
         <div
-          className="grid grid-flow-dense grid-cols-12 gap-3 sm:gap-4 md:gap-5 md:auto-rows-[minmax(84px,7.25vmin)]"
+          className="grid grid-flow-dense grid-cols-12 gap-2 sm:gap-2.5 md:gap-3 md:auto-rows-[minmax(84px,7.25vmin)]"
           role="list"
           aria-label="Photo gallery"
         >
@@ -41,7 +41,7 @@ export function Gallery({ baseUrl }: Props) {
             <motion.figure
               key={item.file}
               role="listitem"
-              className={`group relative min-h-[220px] overflow-hidden rounded-sm bg-canvas-muted shadow-[0_20px_48px_-26px_rgba(42,77,64,0.38)] ring-1 ring-accent/12 transition-[box-shadow,transform] duration-300 ease-out motion-safe:hover:-translate-y-0.5 motion-safe:hover:shadow-[0_28px_56px_-24px_rgba(42,77,64,0.45)] md:h-full md:min-h-0 ${BENTO_LAYOUT[index % BENTO_LAYOUT.length]}`}
+              className={`group relative min-h-[220px] overflow-hidden bg-canvas md:h-full md:min-h-0 ${BENTO_LAYOUT[index % BENTO_LAYOUT.length]}`}
               initial={reduceMotion ? false : { opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
@@ -57,7 +57,7 @@ export function Gallery({ baseUrl }: Props) {
                 alt={item.alt}
                 loading="lazy"
                 decoding="async"
-                className="absolute inset-0 h-full w-full object-contain object-center transition duration-500 ease-out motion-safe:group-hover:scale-[1.02]"
+                className="absolute inset-0 h-full w-full object-cover object-center transition duration-700 ease-out motion-safe:group-hover:scale-[1.02]"
               />
               <figcaption className="sr-only">{item.category.replace(/-/g, ' ')}</figcaption>
             </motion.figure>
