@@ -6,60 +6,53 @@ export function Bio() {
   return (
     <section
       id="bio"
-      className="scroll-mt-20 border-y border-ink/10 bg-canvas-muted/40 px-5 py-24 md:px-10 md:py-32"
+      className="scroll-mt-16 border-y border-accent/12 bg-surface/80 px-4 py-16 sm:px-6 md:scroll-mt-20 md:px-10 md:py-20"
       aria-labelledby="bio-heading"
     >
-      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+      <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-14">
         <motion.div
-          initial={reduceMotion ? false : { opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={reduceMotion ? false : { opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.45 }}
         >
-          <p className="text-xs font-medium uppercase tracking-[0.35em] text-accent">
-            Bio
+          <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-accent">
+            A little about me
           </p>
           <h2
             id="bio-heading"
-            className="mt-4 font-serif text-4xl tracking-tight text-ink md:text-5xl"
+            className="mt-3 font-serif text-2xl tracking-tight text-ink md:text-3xl"
           >
-            Rooted in Mexico, home in LA
+            Mexico → Los Angeles
           </h2>
-          <p className="mt-8 text-lg leading-relaxed text-ink-muted">
-            I&apos;m originally from Mexico and relocated to Los Angeles in 2017—and
-            I&apos;ve been here ever since, letting the city&apos;s light and rhythm
-            shape how I show up on set. I love meeting new models and photographers,
-            building chemistry quickly, and expressing myself through my body with
-            clarity and play.
-          </p>
-          <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-            Whether it&apos;s refined editorial, energetic movement, or intimate
-            portraiture, I bring professionalism, warmth, and a spark that keeps
-            frames feeling alive.
+          <p className="mt-6 text-base leading-relaxed text-ink-muted md:text-lg">
+            Originally from Mexico, I moved to LA in 2017 and have been here since,
+            soaking up the light and creative scene. I love meeting new models and
+            photographers, and expressing myself through my body—whether that&apos;s
+            soft editorial or big movement.
           </p>
         </motion.div>
 
         <motion.ul
-          className="flex flex-col justify-center gap-6 rounded-3xl border border-ink/10 bg-canvas/60 p-8 backdrop-blur-md md:p-10"
-          initial={reduceMotion ? false : { opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="flex flex-col justify-center gap-4 rounded-2xl border border-accent/15 bg-canvas/90 p-6 md:rounded-3xl md:p-8"
+          initial={reduceMotion ? false : { opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.5, delay: reduceMotion ? 0 : 0.08 }}
+          transition={{ duration: 0.45, delay: reduceMotion ? 0 : 0.06 }}
         >
           {[
-            { label: 'Based in', value: 'Los Angeles, CA' },
-            { label: 'Since', value: '2017 in LA · Mexico-born' },
-            { label: 'Focus', value: 'Editorial · beauty · lifestyle' },
-            { label: 'Vibe', value: 'Collaborative, kinetic, precise' },
+            { label: 'Home base', value: 'Los Angeles' },
+            { label: 'Since', value: '2017 in LA' },
+            { label: 'On set', value: 'Editorial · beauty · lifestyle' },
           ].map((row) => (
             <li
               key={row.label}
-              className="flex flex-col gap-1 border-b border-ink/10 pb-6 last:border-b-0 last:pb-0"
+              className="flex flex-col gap-0.5 border-b border-accent/10 pb-4 last:border-b-0 last:pb-0"
             >
-              <span className="text-xs uppercase tracking-[0.3em] text-ink-muted">
+              <span className="text-[10px] uppercase tracking-[0.28em] text-ink-muted">
                 {row.label}
               </span>
-              <span className="text-xl font-medium text-ink">{row.value}</span>
+              <span className="text-lg font-medium text-ink">{row.value}</span>
             </li>
           ))}
         </motion.ul>

@@ -1,28 +1,28 @@
 const links = [
   { href: '#gallery', label: 'Portfolio' },
   { href: '#bio', label: 'Bio' },
-  { href: '#contact', label: 'Rates' },
+  { href: '#contact', label: 'Contact me' },
 ] as const
 
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-ink/10 bg-canvas/75 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4 md:px-10">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-accent/15 bg-canvas/65 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 md:px-10">
         <a
           href="#top"
-          className="font-serif text-xl tracking-tight text-ink transition hover:text-accent"
+          className="font-serif text-lg tracking-tight text-ink transition hover:text-accent md:text-xl"
         >
-          Andrea Gonzahe
+          Lacy
         </a>
         <nav
-          className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-semibold uppercase tracking-[0.2em] text-ink-muted"
+          className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-muted sm:gap-x-7"
           aria-label="Primary"
         >
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="transition hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="transition hover:text-accent focus-visible:rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
             >
               {link.label}
             </a>

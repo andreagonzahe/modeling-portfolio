@@ -22,11 +22,11 @@ export default function App() {
         <Bio />
         <Contact inquiryEmail={INQUIRY_EMAIL} />
       </main>
-      <footer className="border-t border-ink/10 px-5 py-10 text-center text-sm text-ink-muted md:px-10">
+      <footer className="border-t border-accent/12 px-4 py-8 text-center text-xs text-ink-muted sm:px-6 md:px-10 md:text-sm">
         <p>
-          © {new Date().getFullYear()} Andrea Gonzahe · Los Angeles ·{' '}
+          © {new Date().getFullYear()} Lacy · Los Angeles ·{' '}
           <a
-            className="text-accent underline-offset-4 hover:underline"
+            className="font-medium text-accent underline-offset-4 hover:underline"
             href={`mailto:${INQUIRY_EMAIL}`}
           >
             {INQUIRY_EMAIL}

@@ -1,6 +1,6 @@
 # Modeling portfolio
 
-Modern single-page portfolio for Andrea Gonzahe—Los Angeles model (Mexico-born, based in LA since 2017). Built with Vite, React, TypeScript, Tailwind CSS v4, and Framer Motion.
+Modern single-page portfolio for **Lacy**—Los Angeles model (Mexico-born, based in LA since 2017). Built with Vite, React, TypeScript, Tailwind CSS v4, and Framer Motion.
 
 ## Local development
 

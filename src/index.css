@@ -2,13 +2,17 @@
 
 @theme {
   --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
-  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
-  --color-canvas: #0c0a09;
-  --color-canvas-muted: #1c1917;
-  --color-ink: #fafaf9;
-  --color-ink-muted: #a8a29e;
-  --color-accent: #f59e0b;
-  --color-accent-soft: rgba(245, 158, 11, 0.15);
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  /* Light, botanical surfaces — no harsh black */
+  --color-canvas: #eef8f3;
+  --color-canvas-muted: #dff4ea;
+  --color-surface: #f7fcf9;
+  --color-ink: #2a4d40;
+  --color-ink-muted: #5c8f7c;
+  --color-accent: #0f766e;
+  --color-accent-hover: #0d9488;
+  --color-accent-soft: rgba(15, 118, 110, 0.12);
+  --color-ring: rgba(13, 148, 136, 0.35);
 }
 
 @layer base {
@@ -33,6 +37,6 @@
   }
 
   ::selection {
-    @apply bg-accent text-canvas;
+    @apply bg-accent-soft text-ink;
   }
 }
