@@ -57,7 +57,7 @@ export function Gallery({ baseUrl }: Props) {
                 alt={item.alt}
                 loading="lazy"
                 decoding="async"
-                className="absolute inset-0 h-full w-full object-cover object-center transition duration-700 ease-out motion-safe:group-hover:scale-[1.02]"
+                className="absolute inset-0 h-full w-full object-contain object-center transition duration-700 ease-out motion-safe:group-hover:scale-[1.015]"
               />
               <figcaption className="sr-only">{item.category.replace(/-/g, ' ')}</figcaption>
             </motion.figure>
