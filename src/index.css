@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --color-canvas: #0c0a09;
+  --color-canvas-muted: #1c1917;
+  --color-ink: #fafaf9;
+  --color-ink-muted: #a8a29e;
+  --color-accent: #f59e0b;
+  --color-accent-soft: rgba(245, 158, 11, 0.15);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-canvas text-ink antialiased font-sans;
+    margin: 0;
+    min-height: 100svh;
+  }
+
+  #root {
+    min-height: 100svh;
+  }
+
+  ::selection {
+    @apply bg-accent text-canvas;
+  }
+}
